@@ -391,7 +391,8 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
   }
   if (message.length == 0) {
-    document.getElementById("test").value = "456";
+    errorElement.innerText = "";
+    final.innerText = "";
     e.preventDefault();
     // Setting parametter
     var result = `
