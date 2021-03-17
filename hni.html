@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNG Script for HNI</title>
+    <script defer src="main.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
+    <h1>Tạo User HNI</h1>
+    <form id="form" action="/" method="GET">
+      <p class="p-2 m-2 lead">
+        <strong>Thông tin chung.</strong>
+      </p>
+      <div class="p-2 m-2 e-2 input-group mb3">
+        <!--K/h Mobifone/VTVcab?-->
+        <span class="input-group-text" id="basic-addon1">Khách hàng</span>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="loai_khach_hang"
+        >
+          <option selected>Khách hàng</option>
+          <option value="1">Mobifone</option>
+          <option value="2">VTVcab</option>
+        </select>
+        <!--Goi cuoc ca nhan/doanh nghiep?-->
+        <span class="input-group-text" id="basic-addon1">Gói cước</span>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="loai_goi_cuoc"
+        >
+          <option selected>Loại gói cước</option>
+          <option value="1">Cá nhân</option>
+          <option value="2">Doanh nghiệp</option>
+        </select>
+      </div>
+      <p class="p-2 m-2 lead">
+        <strong>Thông tin chi tiết khách hàng.</strong>
+      </p>
+      <!--Thong tin khach hang?-->
+      <div class="p-2 m-2 input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">uid</span>
+        <input
+          style="width: 10%"
+          type="text"
+          id="uid"
+          class="form-control"
+          placeholder="Enter Username"
+          aria-label="Username"
+        />
+        <span class="input-group-text">Password</span>
+        <input
+          style="width: 10%"
+          type="text"
+          id="Password"
+          class="form-control"
+          placeholder="Enter Password"
+          aria-label="Password"
+        />
+        <span class="input-group-text">Description</span>
+        <input
+          style="width: 50%"
+          type="text"
+          class="form-control"
+          id="description"
+          placeholder="Mô tả khách hàng"
+          aria-label="Description"
+        />
+      </div>
+      <p class="p-2 m-2 lead">
+        <strong>Thông tin gói cước.</strong>
+      </p>
+      <!--Lua chon goi cuoc-->
+
+      <div class="p-2 m-2 e-2 input-group mb3">
+        <!--K/h Mobifone/VTVcab?-->
+        <span class="input-group-text">Gói cước</span>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="goi_cuoc"
+        >
+          <option selected>Chọn gói cước</option>
+        </select>
+      </div>
+      <!--Lua chon goi cuoc-->
+      <div class="p-2 m-2 input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">IP</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="IP tĩnh cấp cho khách hàng"
+          aria-label="IP"
+          id="IP"
+        />
+        <span class="input-group-text">Block IP 1</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Block ip cấp cho khách hàng"
+          aria-label="Block1"
+          id="Block1"
+        />
+        <span class="input-group-text" id="basic-addon1">Block IP 2</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Block ip cấp cho khách hàng"
+          aria-label="Block2"
+          id="Block2"
+        />
+      </div>
+
+      <button type="submit" class="p-2 m-2 btn btn-primary">Tạo LDIF</button>
+      <span class="m-2 p-2 text" id="error" style="color: red"></span>
+    </form>
+    <!--    Result  -->
+    <hr />
+    <p class="m-2 p-2 text" id="test" style="color: blue"></p>
+    <button type="button" class="p-2 m-2 btn btn-info btn-sm" id="copy">
+      Copy
+    </button>
+    <!-- <span class="m-2 p-2 text" id="test2"></span> -->
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
